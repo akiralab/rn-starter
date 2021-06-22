@@ -1,14 +1,12 @@
 import React from 'react';
-import { Text, StyleSheet } from 'react-native';
+import { Text, View } from 'react-native';
 
-const HomeScreen = () => {
- return <Text style={styles.text}>HomeScreen</Text>;
+const YourApp = () => {
+ return (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+   <Text>Try editing me! 🎉</Text>
+  </View>
+ );
 };
 
-const styles = StyleSheet.create({
- text: {
-  fontSize: 30,
- },
-});
-
-export default HomeScreen;
+export default YourApp;
