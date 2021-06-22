@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
-import { Text, TextInput, View } from 'react-native';
+import { Image, Text, TextInput, View, ScrollView } from 'react-native';
 
-const PizzaTranslator = () => {
- const [text, setText] = useState('');
- return (
-  <View style={{ padding: 10 }}>
-   <TextInput
-    style={{ height: 40 }}
-    placeholder="Type here to translate!"
-    onChangeText={(text) => setText(text)}
-    defaultValue={text}
-   />
-   <Text style={{ padding: 10, fontSize: 42 }}>
-    {text
-     .split(' ')
-     .map((word) => word && '🍕')
-     .join(' ')}
-   </Text>
-  </View>
- );
+const logo = {
+ uri: 'https://reactnative.dev/img/tiny_logo.png',
+ width: 64,
+ height: 64,
 };
 
-export default PizzaTranslator;
+const App = () => (
+ <ScrollView>
+  <Text style={{ fontSize: 10 }}>Scroll me!</Text>
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+  <Image source={logo} />
+ </ScrollView>
+);
+
+export default App;
